@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -23,6 +24,7 @@ public class StorageServiceImpl extends ServiceImpl<StorageMapper, Storage> impl
     private StorageMapper storageMapper;
 
     @Override
+    @Transactional
     public void deduct(String id, Double count) {
         log.info("开始扣减库存...");
         try {
