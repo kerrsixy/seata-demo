@@ -31,7 +31,7 @@
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
         <alibaba.version>2.2.5.RELEASE</alibaba.version>
         <loadbalancer.version>3.1.5</loadbalancer.version>
-        <mysql.version>8.0.32</mysql.version>
+        <mysql.version>8.0.11</mysql.version>
     </properties>
 
     <dependencyManagement>
