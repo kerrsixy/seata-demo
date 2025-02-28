@@ -7,6 +7,7 @@ import com.zjp.order.mapper.OrderMapper;
 import com.zjp.order.service.IOrderService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import feign.FeignException;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,8 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private OrderMapper orderMapper;
 
     @Override
-    @Transactional
+//    @Transactional
+    @GlobalTransactional
     public Integer create(Order order) {
         log.info("开始创建订单...");
         Integer id = order.getId();
